@@ -1,0 +1,68 @@
+/* BeyondTheBooks.css */
+
+.beyond-the-books {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .conthr hr {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .cards-container {
+    width: 100%;
+    padding-left: 10%;
+    /*display: flex;*/
+    flex-direction: column; /* Arrange cards vertically */
+    align-items: center;
+  }
+  
+  .hover-card {
+    width: 80%; /* Make the card bigger */
+    margin-bottom: 30px;
+    background-color: #003135;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hover-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+  }
+  
+  .card-title {
+    padding: 20px;
+    background-color: #244855;
+    color: #90AEAD;
+    font-size: 1.5rem;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%; 
+    /*overflow: hidden;*/
+  }
+  
+  .card-carousel {
+    height: 10%;
+    width: 10%;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+    background-color: #244855;
+    color: #90AEAD;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  
+  
