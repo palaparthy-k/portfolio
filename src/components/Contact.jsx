@@ -6,6 +6,8 @@ import { style } from "../style";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+// template_775vn71
+// service_5cei049
 
 const Contact = () => {
   const formRef = useRef();
@@ -13,37 +15,34 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
-  });
+  })
 
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
 
     setForm({
       ...form,
       [name]: value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Keerthana Palaparthy",
-          from_email: form.email,
-          to_email: "keerthana.palaparthy@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
+    emailjs.send(
+      "service_nig83jn", "template_6gzy1in",
+      {
+        from_name: form.name,
+        to_name: "Keerthana Palaparthy",
+        from_email: form.email,
+        to_email: "keerthana.palaparthy@gmail.com",
+        message: form.message,
+      },
+      "a7aWlUU6cPZCAXpg1"
+    )
       .then(
         () => {
           setLoading(false);
@@ -53,16 +52,16 @@ const Contact = () => {
             name: "",
             email: "",
             message: "",
-          });
+          })
         },
         (error) => {
           setLoading(false);
-          console.error(error);
+          console.log(error);
 
           alert("Ahh, something went wrong. Please try again.");
         }
-      );
-  };
+      )
+  }
 
   return (
     <div
@@ -74,7 +73,14 @@ const Contact = () => {
       >
         <p className={style.sectionSubText}>Get in touch</p>
         <h3 className={style.sectionHeadText}>Contact.</h3>
-
+        <label className='flex flex-col'>
+            <p className='text-white font-medium mb-4'><span className="orange-text-gradient" >Feel free to ring me at:  </span>
+            +91 90592 19619</p>
+          </label>
+          <label className='flex flex-col'>
+            <p className='text-white font-medium mb-4'><span className="pink-text-gradient" >Drop me a line at:  </span>
+            keerthana.palaparthy@gmail.com</p>
+          </label>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -130,7 +136,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 export default SectionWrapper(Contact, "contact");

@@ -1,3 +1,4 @@
+import { About, Works, Contact } from "../components";
 import {
     mobile,
     backend,
@@ -23,6 +24,7 @@ import {
     jobit,
     tripguide,
     threejs,
+    github,
   } from "../assets";
   
   export const navLinks = [
@@ -31,8 +33,12 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "experience",
+      title: "Experience",
+    },
+    {
+      id: "works",
+      title: "Works",
     },
     {
       id: "contact",
@@ -135,28 +141,16 @@ import {
   
   const testimonials = [
     {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      testimonial:"LinkedIn",
+      linkto: "https://www.linkedin.com/in/keerthanapalaparthy/",
+      name:"Keerthana Palaparthy",
+      image: jobit,
     },
     {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+      testimonial: "GitHub",
+      linkto:"https://github.com/palaparthy-k",
+      name: "palaparthy-k",
+      image: github,
     },
   ];
   
